@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática Básica: Seus Primeiros Passos no Mundo Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f0f4f8;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background-image 0.5s ease;
+        }
+        .nav-link.active {
+            background-color: #2563eb;
+            color: white;
+            font-weight: 600;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .modal-backdrop {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-content {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        section {
+            scroll-margin-top: 4rem;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar" class="w-72 bg-white/90 backdrop-blur-sm shadow-lg p-4 fixed top-0 left-0 h-full transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-30 overflow-y-auto">
+            <h1 class="text-2xl font-bold text-blue-600 mb-6 border-b pb-4">Informática Básica</h1>
+            <div class="space-y-4">
+                <div>
+                    <h2 class="text-sm font-bold text-slate-500 uppercase tracking-wider px-4 mb-2">Sumário</h2>
+                    <ul class="space-y-1">
+                        <li><a href="#sumario" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Sumário do Guia</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-sm font-bold text-slate-500 uppercase tracking-wider px-4 mb-2">Módulo 1</h2>
+                    <ul class="space-y-1">
+                        <li><a href="#o-que-e-informatica" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">O que é Informática?</a></li>
+                        <li><a href="#historico-evolucao" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Histórico e Evolução Tecnológica</a></li>
+                        <li><a href="#aplicacoes" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Aplicações e Impacto Social</a></li>
+                        <li><a href="#futuro" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Perspectivas Futuras e Desafios</a></li>
+                        <li><a href="#tipos-de-computadores" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Tipos de Computadores</a></li>
+                        <li><a href="#uso-no-cotidiano" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Uso no Cotidiano</a></li>
+                        <li><a href="#perifericos-de-entrada" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Periféricos de Entrada</a></li>
+                        <li><a href="#perifericos-de-saida" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Periféricos de Saída</a></li>
+                        <li><a href="#portas" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Portas de Conexão</a></li>
+                        <li><a href="#conectividade" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Conectividade</a></li>
+                        <li><a href="#armazenamento" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Dispositivos de Armazenamento</a></li>
+                        <li><a href="#cuidados-basicos" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Cuidados Básicos</a></li>
+                        <li><a href="#ligar-desligar" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Ligar e Desligar Corretamente</a></li>
+                        <li><a href="#erros-comuns" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Erros Comuns</a></li>
+                        <li><a href="#glossario" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Glossário de Termos Básicos</a></li>
+                        <li><a href="#curiosidades" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Curiosidades sobre Tecnologia</a></li>
+                        <li><a href="#conclusao" class="nav-link block text-slate-700 hover:bg-blue-500 hover:text-white rounded-lg px-4 py-2 transition-colors duration-200">Conclusão</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <button id="menu-toggle" class="lg:hidden fixed top-4 left-4 z-40 bg-white p-2 rounded-md shadow-md">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+
+        <main class="flex-1 lg:ml-72 p-6 md:p-10 space-y-12">
+            
+            <header class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-600">Seus Primeiros Passos no Mundo Digital</h1>
+                <p class="mt-4 text-lg text-slate-600">Bem-vindo ao guia de informática básica! Explore os módulos no menu ao lado para aprender no seu ritmo.</p>
+            </header>
+
+            <section id="sumario">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Sumário do Guia</h2>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li>O Computador: Entenda o que é um computador e como ele funciona.</li>
+                        <li>Hardware e Periféricos: Conheça as peças do seu PC, do mouse à impressora.</li>
+                        <li>Software e Sistema Operacional: Descubra os programas que dão vida à sua máquina.</li>
+                        <li>Organizando Arquivos: Aprenda a gerenciar pastas, documentos e fotos.</li>
+                        <li>Navegando na Internet: Use a internet com segurança e eficiência.</li>
+                        <li>Dicas e Truques: Saiba o que fazer em caso de problemas e aprenda atalhos.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="o-que-e-informatica">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Módulo 1: O que é Informática?</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">A informática (termo derivado da contração de "informação automática") é uma ciência interdisciplinar que estuda o tratamento racional e automatizado da informação por meio de sistemas computacionais. Ela engloba desde a análise, coleta, classificação, armazenamento, recuperação e disseminação de informações até o desenvolvimento de tecnologias que permitem sua aplicação em diversos setores da sociedade. Seu núcleo fundamental combina elementos da matemática, engenharia, lógica e ciência da computação.</p>
+                </div>
+            </section>
+            
+            <section id="historico-evolucao">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Histórico e Evolução Tecnológica</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">A informática moderna emergiu de uma longa evolução tecnológica:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600 mb-6">
+                        <li><strong>Antiguidade:</strong> Instrumentos como o ábaco (século V a.C.) e mecanismos como o Mecanismo de Anticítera (100 a.C.) foram precursores dos computadores.</li>
+                        <li><strong>Século XIX:</strong> Charles Babbage projetou a Máquina Analítica, considerada o primeiro conceito de computador programável, enquanto Ada Lovelace desenvolveu o primeiro algoritmo para essa máquina.</li>
+                        <li><strong>Décadas de 1940-1950:</strong> Surgiram os primeiros computadores eletrônicos, como o ENIAC (1945), que utilizava válvulas e consumia energia equivalente a centenas de residências modernas.</li>
+                        <li><strong>Revolução dos transistores e circuitos integrados:</strong> Permitiram a miniaturização e o aumento da capacidade de processamento, levando aos computadores pessoais na década de 1970 (ex.: Apple II, IBM PC).</li>
+                        <li><strong>Era moderna:</strong> Computação em nuvem, inteligência artificial e dispositivos móveis (como smartphones) transformaram a informática em uma tecnologia ubíqua.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-slate-700 mb-4">Tabela Comparativa: Gerações de Computadores</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse rounded-lg shadow-md">
+                            <thead>
+                                <tr class="bg-blue-600 text-white">
+                                    <th class="p-4 rounded-tl-lg">Geração</th>
+                                    <th class="p-4">Período</th>
+                                    <th class="p-4">Tecnologia Principal</th>
+                                    <th class="p-4 rounded-tr-lg">Exemplos de Aplicações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-slate-100 border-b border-slate-200">
+                                    <td class="p-4">1ª</td>
+                                    <td class="p-4">1951-1959</td>
+                                    <td class="p-4">Válvulas eletrônicas</td>
+                                    <td class="p-4">ENIAC, cálculos balísticos</td>
+                                </tr>
+                                <tr class="bg-white border-b border-slate-200">
+                                    <td class="p-4">2ª</td>
+                                    <td class="p-4">1959-1965</td>
+                                    <td class="p-4">Transistores</td>
+                                    <td class="p-4">IBM 1401, sistemas comerciais</td>
+                                </tr>
+                                <tr class="bg-slate-100 border-b border-slate-200">
+                                    <td class="p-4">3ª</td>
+                                    <td class="p-4">1965-1975</td>
+                                    <td class="p-4">Circuitos integrados</td>
+                                    <td class="p-4">IBM System/360, apostilas digitais</td>
+                                </tr>
+                                <tr class="bg-white border-b border-slate-200">
+                                    <td class="p-4">4ª</td>
+                                    <td class="p-4">1975-presente</td>
+                                    <td class="p-4">Microprocessadores</td>
+                                    <td class="p-4">PCs, smartphones, IoT</td>
+                                </tr>
+                                <tr class="bg-slate-100">
+                                    <td class="p-4 rounded-bl-lg">5ª (emergente)</td>
+                                    <td class="p-4">Futuro</td>
+                                    <td class="p-4">IA e computação quântica</td>
+                                    <td class="p-4 rounded-br-lg">Simulações quânticas, redes neurais</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="aplicacoes">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Aplicações e Impacto Social</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">A informática é onipresente na sociedade contemporânea, com um impacto significativo em diversas áreas:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li><strong>Educação:</strong> Ferramentas como lousas digitais, plataformas de aprendizagem online e inteligência artificial personalizam o ensino e democratizam o acesso ao conhecimento.</li>
+                        <li><strong>Saúde:</strong> Sistemas de diagnóstico por imagem, prontuários eletrônicos e cirurgias robóticas aumentam a precisão e eficiência.</li>
+                        <li><strong>Indústria:</strong> Automação de processos produtivos com robótica e IoT (Internet das Coisas) reduz custos e aumenta a produtividade.</li>
+                        <li><strong>Comunicação:</strong> Redes sociais, e-mails e videoconferências transformaram as relações humanas, encurtando distâncias mas também criando desafios como a desinformação e a dependência digital.</li>
+                        <li><strong>Economia:</strong> Comércio eletrônico, criptomoedas e fintechs revolucionaram transações financeiras e modelos de negócios.</li>
+                    </ul>
+                    <p class="text-lg text-slate-600 leading-relaxed mt-6">A informática também amplifica disparidades sociais. Regiões como o Norte e Nordeste do Brasil têm menor acesso a computadores e internet em escolas, afetando oportunidades educacionais. O consumo energético de data centers e dispositivos eletrônicos requer soluções verdes (ex.: eficiência energética em CPUs).</p>
+                </div>
+            </section>
+            
+            <section id="futuro">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Perspectivas Futuras e Desafios</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">O futuro da informática reserva tendências promissoras e desafios importantes:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li><strong>Computação quântica:</strong> Promete resolver problemas complexos intratáveis para computadores clássicos, como simulações moleculares e otimização global.</li>
+                        <li><strong>Inteligência Artificial generativa:</strong> Sistemas como ChatGPT e modelos de geração de imagens estão redefinindo criatividade e automação de tarefas cognitivas.</li>
+                        <li><strong>Ética e segurança digital:</strong> Com a crescente dependência de sistemas computacionais, temas como privacidade de dados, viés algorítmico e cibersegurança tornam-se críticos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="tipos-de-computadores">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Tipos de Computadores</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Hoje, existem muitos tipos de computadores, cada um com uma função específica. Os mais comuns são:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li><strong>Desktop:</strong> O computador de mesa tradicional, com torre, monitor e periféricos separados.</li>
+                        <li><strong>Notebook:</strong> Um computador portátil, com tela, teclado e bateria integrados.</li>
+                        <li><strong>Tablet:</strong> Dispositivo móvel com tela sensível ao toque, maior que um smartphone.</li>
+                        <li><strong>Smartphone:</strong> O computador mais comum do dia a dia, que usamos para fazer ligações, navegar na internet e muito mais.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="uso-no-cotidiano">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Uso de Computadores no Cotidiano</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">Os computadores transformaram a forma como vivemos. No trabalho, eles são usados para criar documentos, gerenciar projetos e se comunicar. Na vida pessoal, eles permitem fazer compras online, assistir a filmes, ouvir música e manter contato com amigos e família. Eles se tornaram ferramentas essenciais para estudo, lazer e comunicação.</p>
+                </div>
+            </section>
+
+            <section id="perifericos-de-entrada">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Periféricos de Entrada</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">São os equipamentos que usamos para inserir dados no computador. Clique nos cartões para saber mais.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Teclado" data-desc="A principal ferramenta para digitar textos, números e comandos. Cada tecla envia um sinal que o computador entende.">
+                            <h3 class="font-bold text-lg text-slate-800">⌨️ Teclado</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Mouse" data-desc="Usado para mover o cursor na tela e interagir com elementos gráficos, como botões e ícones.">
+                            <h3 class="font-bold text-lg text-slate-800">🖱️ Mouse</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Scanner" data-desc="Um dispositivo que 'escaneia' fotos ou documentos em papel e os transforma em arquivos digitais.">
+                            <h3 class="font-bold text-lg text-slate-800">🖨️ Scanner</h3>
+                        </div>
+                         <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Microfone" data-desc="Captura sua voz e outros sons, transformando-os em sinais digitais para o computador. Essencial para videochamadas e gravações.">
+                            <h3 class="font-bold text-lg text-slate-800">🎤 Microfone</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Webcam" data-desc="Uma câmera digital que captura imagens e vídeos em tempo real. Usada para videochamadas e transmissões ao vivo.">
+                            <h3 class="font-bold text-lg text-slate-800">📷 Webcam</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="perifericos-de-saida">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Periféricos de Saída</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">São os equipamentos que o computador usa para mostrar os resultados do processamento. Clique nos cartões para saber mais.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Monitor" data-desc="A 'tela' onde você visualiza tudo o que o computador está processando. Pode exibir textos, imagens e vídeos.">
+                            <h3 class="font-bold text-lg text-slate-800">🖥️ Monitor</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Impressora" data-desc="Dispositivo que transfere textos e imagens de um arquivo digital para o papel.">
+                            <h3 class="font-bold text-lg text-slate-800">🖨️ Impressora</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Caixas de Som" data-desc="Reproduzem sons, músicas e áudios do computador.">
+                            <h3 class="font-bold text-lg text-slate-800">🔊 Caixas de Som</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Projetor" data-desc="Dispositivo que projeta a imagem da tela do computador em uma superfície maior, como uma parede ou telão.">
+                            <h3 class="font-bold text-lg text-slate-800">📽️ Projetor</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portas">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Portas de Conexão</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">As portas são os lugares onde os cabos dos periféricos são conectados. É importante saber qual cabo vai em qual porta.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Porta USB" data-desc="A mais comum. Usada para conectar pen drives, mouses, teclados, câmeras e celulares.">
+                            <h3 class="font-bold text-lg text-slate-800">🔌 USB</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Porta HDMI" data-desc="Conecta o computador a monitores, TVs e projetores, transmitindo áudio e vídeo em alta qualidade.">
+                            <h3 class="font-bold text-lg text-slate-800">📺 HDMI</h3>
+                        </div>
+                        <div class="card bg-slate-100 p-5 rounded-lg cursor-pointer" data-title="Porta de Rede" data-desc="Usada para conectar o computador a uma rede de internet através de um cabo (cabo de rede ou Ethernet).">
+                            <h3 class="font-bold text-lg text-slate-800">🌐 Rede</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conectividade">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Conectividade</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Além dos cabos, o computador pode se conectar a outros dispositivos sem fios:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li><strong>Wi-Fi:</strong> Permite que o computador acesse a internet sem precisar de um cabo de rede.</li>
+                        <li><strong>Bluetooth:</strong> Usado para conectar fones de ouvido, teclados, mouses e outros dispositivos a curtas distâncias, sem fio.</li>
+                        <li><strong>NFC:</strong> Permite a troca de dados entre dispositivos que estão muito próximos. É usado em pagamentos por aproximação, por exemplo.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="armazenamento">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Dispositivos de Armazenamento</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">São usados para guardar seus arquivos fora do computador. Perfeitos para fazer backup ou transferir dados.</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li><strong>Pen Drive:</strong> Pequeno e portátil, ideal para levar arquivos para todo lugar.</li>
+                        <li><strong>HD Externo:</strong> Oferece mais espaço de armazenamento do que um pen drive, bom para guardar muitos arquivos.</li>
+                        <li><strong>Cartão de Memória:</strong> Pequeno, usado em câmeras, celulares e notebooks para expandir o armazenamento.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="cuidados-basicos">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Cuidados Básicos com o Equipamento</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Para garantir que seu computador dure mais tempo, siga estas dicas:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li>Mantenha o computador em um local arejado e limpo para evitar o superaquecimento.</li>
+                        <li>Não coma ou beba perto do teclado para não sujar as teclas ou derramar líquido.</li>
+                        <li>Use um estabilizador ou no-break para proteger o computador de quedas de energia.</li>
+                        <li>Limpe a tela e as peças externas com um pano macio e seco.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ligar-desligar">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Como Ligar e Desligar Corretamente</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Ligar: Pressione o botão de ligar na torre ou no notebook. Aguarde até que o sistema carregue completamente.</p>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Desligar: Para evitar danos aos arquivos, sempre desligue o computador pelo menu do sistema operacional (Botão Iniciar > Desligar). Nunca o desligue da tomada diretamente, exceto em emergências.</p>
+                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-md" role="alert">
+                        <p class="font-bold">Aviso!</p>
+                        <p>Desligar o computador da tomada pode corromper seus arquivos e até danificar o hardware.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="erros-comuns">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Erros Comuns de Iniciantes</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Todos cometem erros no início. Veja como evitá-los:</p>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-slate-600">
+                        <li><strong>Não salvar o trabalho:</strong> Salve seus documentos e arquivos com frequência para não perdê-los.</li>
+                        <li><strong>Baixar vírus:</strong> Instale um antivírus e desconfie de arquivos e sites suspeitos.</li>
+                        <li><strong>Organização:</strong> Crie pastas para organizar seus arquivos. A Área de Trabalho não é um bom lugar para guardar tudo.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="glossario">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Glossário de Termos Básicos</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Confira alguns dos termos mais usados no mundo da informática para expandir seu vocabulário:</p>
+                    <dl class="space-y-4">
+                        <div>
+                            <dt class="font-bold text-xl">Hardware</dt>
+                            <dd class="text-lg text-slate-600 ml-4">Toda a parte física do computador, como CPU, memória RAM, discos rígidos e dispositivos periféricos. É o que você pode tocar.</dd>
+                        </div>
+                        <div>
+                            <dt class="font-bold text-xl">Software</dt>
+                            <dd class="text-lg text-slate-600 ml-4">A parte "não física" do computador, ou seja, os programas e sistemas operacionais que gerenciam o hardware e processam dados. Inclui sistemas embarcados em dispositivos como smartphones e robôs industriais.</dd>
+                        </div>
+                        <div>
+                            <dt class="font-bold text-xl">Dados e Algoritmos</dt>
+                            <dd class="text-lg text-slate-600 ml-4">Baseiam-se em sistemas de numeração binária e lógica booleana, conceitos fundamentais para o processamento de informações.</dd>
+                        </div>
+                        <div>
+                            <dt class="font-bold text-xl">RAM</dt>
+                            <dd class="text-lg text-slate-600 ml-4">Memória de Acesso Aleatório (Random Access Memory). É a memória de trabalho do computador, usada para executar programas temporariamente. Quanto mais RAM, mais rápido o seu computador pode processar tarefas.</dd>
+                        </div>
+                        <div>
+                            <dt class="font-bold text-xl">CPU</dt>
+                            <dd class="text-lg text-slate-600 ml-4">Unidade Central de Processamento (Central Processing Unit). É o "cérebro" do computador, responsável por todos os cálculos e instruções. A CPU é dividida em Unidade de Controle, Unidade Lógica e Aritmética (ULA) e registradores.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+            
+            <section id="curiosidades">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Curiosidades sobre Tecnologia</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">Para deixar o aprendizado mais divertido, aqui estão algumas curiosidades fascinantes sobre o mundo da tecnologia:</p>
+                    <ul class="list-disc list-inside space-y-3 text-lg text-slate-600">
+                        <li>O primeiro mouse de computador foi inventado por Douglas Engelbart em 1964 e era feito de madeira. Ele foi batizado de "mouse" porque o cabo na ponta se parecia com o rabo de um rato.</li>
+                        <li>A primeira animação de computador foi feita em 1960. Era de um filme chamado "SQUAWK", que durava apenas 10 minutos.</li>
+                        <li>A primeira câmera digital foi criada pela Kodak em 1975. Ela tirava fotos em preto e branco com uma resolução de 0,01 megapixels. As fotos levavam 23 segundos para serem salvas em uma fita cassete.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="conclusao">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-slate-200">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-4">Conclusão</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">A informática evoluiu de ferramentas mecânicas simples para um ecossistema complexo que permeia todas as esferas da vida humana. Seu futuro dependerá não apenas de avanços tecnológicos, mas também de como a sociedade abordará desafios éticos, ambientais e de inclusão. Seu núcleo permanece centrado na transformação de dados em conhecimento útil para a humanidade, cumprindo a visão pioneira de cientistas como Alan Turing e Ada Lovelace.</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden opacity-0 z-50">
+        <div id="modal-content" class="modal-content bg-white rounded-lg shadow-2xl p-8 max-w-lg w-full transform scale-95 opacity-0">
+            <h3 id="modal-title" class="text-2xl font-bold text-blue-600 mb-4"></h3>
+            <p id="modal-desc" class="text-slate-600 text-lg leading-relaxed"></p>
+            <button id="modal-close" class="mt-6 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200">Entendi</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 1024) {
+                        sidebar.classList.add('-translate-x-full');
+                    }
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+
+            sections.forEach(section => observer.observe(section));
+
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const modalClose = document.getElementById('modal-close');
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    modalTitle.textContent = card.dataset.title;
+                    modalDesc.innerHTML = card.dataset.desc;
+                    
+                    modal.classList.remove('hidden');
+                    setTimeout(() => {
+                         modal.classList.remove('opacity-0');
+                         modalContent.classList.remove('scale-95', 'opacity-0');
+                    }, 10);
+                });
+            });
+
+            function closeModal() {
+                modalContent.classList.add('scale-95', 'opacity-0');
+                modal.classList.add('opacity-0');
+                setTimeout(() => modal.classList.add('hidden'), 300);
+            }
+
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+        });
+    </script>
+</body>
+</html>
